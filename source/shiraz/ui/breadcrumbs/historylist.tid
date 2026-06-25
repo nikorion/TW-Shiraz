@@ -1,13 +1,13 @@
 tags: 
-title: $:/plugins/kookma/shiraz/breadcrumbs/storylist
+title: $:/plugins/kookma/shiraz/ui/breadcrumbs/historylist
 type: text/vnd.tiddlywiki
 
 <nav aria-label="breadcrumb" style="font-size:smaller;">
-<ol class="breadcrumb">
-<$list filter="[list[$:/StoryList]]" variable=item>
+  <ol class="breadcrumb">
+<$list filter="[{$:/HistoryList}jsonindexes[]] :map[{$:/HistoryList}jsonget<currentTiddler>,[title]] :and[unique[]is[tiddler]]" variable=item>
 <$list filter="[<currentTiddler>match<item>]" emptyMessage='<li class="breadcrumb-item"><$link to=<<item>>/></li>'>
 <li class="breadcrumb-item active" aria-current="page"><$text text=<<currentTiddler>>/></li>
 </$list>
 </$list>
-</ol>
+  </ol>
 </nav>

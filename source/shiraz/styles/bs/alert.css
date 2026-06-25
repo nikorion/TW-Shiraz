@@ -18,6 +18,10 @@
   border-radius: var(--bs-alert-border-radius);
 }
 
+.alert .block {
+  --bs-alert-padding-y: 0.1rem;
+}
+
 .alert-heading {
   color: inherit;
 }

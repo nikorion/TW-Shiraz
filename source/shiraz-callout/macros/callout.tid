@@ -7,7 +7,8 @@ type: text/vnd.tiddlywiki
       callout-title = {{{ [<__title__>!is[blank]] :else[<__type__>titlecase[]]  }}}
       icon-tiddler  = {{{ [all[tiddlers+shadows]tag[$:/tags/ShirazCallout/Image]contains:callout-type<__type__>]
                           :else[[$:/plugins/kookma/shiraz-callout/images/note]] }}}
-      source        = {{{ [<__src__>get[text]else<__src__>] }}} >
+      source        = {{{ [<__src__>get[text]else<__src__>] }}}>
+
 <div class=<<theme-class>> style="width:$width$;">
 <div data-callout=<<__type__>> class="callout $class$" $status$>
 <div class="callout-title">
@@ -22,4 +23,4 @@ type: text/vnd.tiddlywiki
 </div>
 </div>
 </$let>
-\end
+\end callout

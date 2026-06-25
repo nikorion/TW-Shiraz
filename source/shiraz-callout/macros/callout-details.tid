@@ -6,8 +6,9 @@ type: text/vnd.tiddlywiki
 <$let theme-class   = {{{ [[$:/palette]get[text]get[color-scheme]else[light]addprefix[theme-]] [<__class__>] :and[join[ ]] }}} 
       callout-title = {{{ [<__title__>!is[blank]] :else[<__type__>titlecase[]]  }}}
       icon-tiddler  = {{{ [all[tiddlers+shadows]tag[$:/tags/ShirazCallout/Image]contains:callout-type<__type__>]
-                        :else[[$:/plugins/kookma/shiraz-callout/images/note]] }}}
-      source        = {{{ [<__src__>get[text]else<__src__>] }}} >
+                          :else[[$:/plugins/kookma/shiraz-callout/images/note]] }}}
+      source        = {{{ [<__src__>get[text]else<__src__>] }}}>
+
 <div class=<<theme-class>> style="width:$width$;">
 <details data-callout=<<__type__>> class="callout $class$" $status$>
 <summary class="callout-title">
@@ -21,4 +22,4 @@ type: text/vnd.tiddlywiki
 </details>
 </div>
 </$let>
-\end
+\end callout-details

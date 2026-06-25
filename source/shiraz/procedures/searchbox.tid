@@ -6,10 +6,8 @@ type: text/vnd.tiddlywiki
 <%if [<label>!is[blank]] %>
 <label class="shiraz-searchbox-label"><<label>></label>
 <%endif%>
-<$keyboard key="escape" actions="""<$action-deletetiddler $tiddler=<<tempTiddler>> />""" >
-<$edit-text tiddler=<<tempTiddler>>
-  field=text 	tag=input 	type=search
-	default=""  placeholder=<<placeholder>>
-	class="shiraz-searchbox" />
+<$keyboard key="escape" actions="""<$action-deletetiddler $tiddler=<<tempTiddler>>/>""">
+<$edit-text tiddler=<<tempTiddler>> field="text" tag="input" 
+type="search" default="" placeholder=<<placeholder>> class="shiraz-searchbox"/>
 </$keyboard>
-\end
+\end search-box

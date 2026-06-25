@@ -1,0 +1,12 @@
+tags: $:/tags/Global
+title: $:/plugins/kookma/shiraz/tables/procs/lingo
+type: text/vnd.tiddlywiki
+
+\procedure shiraz-tables-lingo(title)
+\whitespace trim
+<$let _lang={{{ [[$:/language]get[text]get[name]else[en-GB]] }}}>
+<$transclude $tiddler={{{ [[$:/plugins/kookma/shiraz/language/tables/]addsuffix<_lang>addsuffix[/]addsuffix<title>] }}}>
+<$transclude $tiddler={{{ [[$:/plugins/kookma/shiraz/language/tables/en-GB/]addsuffix<title>] }}}/>
+</$transclude>
+</$let>
+\end

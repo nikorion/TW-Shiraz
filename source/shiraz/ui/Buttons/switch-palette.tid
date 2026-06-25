@@ -6,7 +6,7 @@ title: $:/plugins/kookma/shiraz/ui/Buttons/switch-palette
 type: text/vnd.tiddlywiki
 
 \procedure configTid() $:/config/Shiraz
-\procedure switchPeletteTid() $:/plugins/kookma/shiraz/ui/switch-palette
+\procedure switchPeletteTid() $:/plugins/kookma/shiraz/ui/ControlPanel/switch-palette
 \function light-palette-default() [<switchPeletteTid>get[light-palette]]
 \function warm-palette-default() [<switchPeletteTid>get[warm-palette]]
 \function dark-palette-default() [<switchPeletteTid>get[dark-palette]]

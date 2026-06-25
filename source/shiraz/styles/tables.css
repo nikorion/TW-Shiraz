@@ -1,7 +1,6 @@
-.table-tight{
-	font-size:0.8em;
+.table-tight {
+	font-size: 0.8em;
 }
-
 
 /*
 This tiddler defines the custom stylesheet for tables 
@@ -10,20 +9,19 @@ April 13, 2018
 
 /*center aligned table*/
 .table-center {
- margin:0 auto;
+ margin: 0 auto;
 }
 
 /* Table caption at top */
 .table-caption-top caption {
- caption-side:top;
- margin-bottom:0.2rem;
+ caption-side: top;
+ margin-bottom: 0.2rem;
 }
 
 /* Striped row table */
-.table-striped-row tr:nth-child(even) td{
-  background-color:#F3F6F6; 
+.table-striped-row tr:nth-child(even) td {
+  background-color: #F3F6F6; 
 }
-
 /* Striped column table */
 .table-striped-col tbody tr td:nth-child(odd) {
 	background-color: #F3F6F6;
@@ -34,38 +32,59 @@ April 13, 2018
 .table-borderless thead td, 
 .table-borderless th, 
 .table-borderless tr, 
-.table-borderless td{
-  border:0;
+.table-borderless td {
+  border: 0;
 }
 
 /* Table lines should be used with table-borderless for abbreviations and two column layout */
-
-.table-lines thead td, .table-lines th{
-   border-bottom: 2px solid #dddddd;
-	 background-color:unset;
-   }
-.table-lines td{
-   border-bottom: 1px solid #dddddd;
-   background-color:unset;
-   }
+.table-lines thead td, .table-lines th {
+   border-bottom: 2px solid #ddd;
+	 background-color: unset;
+}
+.table-lines td {
+   border-bottom: 1px solid #ddd;
+   background-color: unset;
+}
 
 /* Table hover (yellow background on mouse over) */
-.table-hover tbody tr:hover{
+.table-hover tbody tr:hover {
   color: #212529;
-  background-color: #e6e6e6;
-}
-.table-hover-yellow tbody tr:hover{background-color: #ffffcc;}
-.table-hover-cyan tbody tr:hover{background-color: #e6ffff;}
+  background-color: #e6e6e6; }
+.table-hover-yellow tbody tr:hover { 
+  background-color: #ffc; }
+.table-hover-cyan tbody tr:hover { 
+  background-color: #e6ffff; }
 
 /* Table with colored header */
-.thead-primary thead td, .thead-primary th{background-color: #007bff; color: #fff;}
-.thead-secondary thead td, .thead-secondary th{background-color: #6c757d; color: #fff;}
-.thead-success thead td, .thead-success th{background-color: #28a745; color: #fff;}
-.thead-warning thead td, .thead-warning th{background-color: #ffc107; color: #fff;}
-.thead-danger thead td, .thead-danger th{background-color: #dc3545; color: #fff;}
-.thead-info thead td, .thead-info th{background-color: #17a2b8; color: #fff;}
-.thead-dark thead td, .thead-dark th{background-color: #343a40; color: #fff;}
-.thead-light thead td, .thead-light th{background-color: #f8f9fa; color: #212529;}
+.thead-primary thead td, .thead-primary th { 
+  background-color: #007bff; }
+.thead-secondary thead td, .thead-secondary th { 
+  background-color: #6c757d; }
+.thead-success thead td, .thead-success th { 
+  background-color: #28a745; }
+.thead-warning thead td, .thead-warning th { 
+  background-color: #ffc107; }
+.thead-danger thead td, .thead-danger th { 
+  background-color: #dc3545; }
+.thead-info thead td, .thead-info th { 
+  background-color: #17a2b8; }
+.thead-dark thead td, .thead-dark th { 
+  background-color: #343a40; }
+.thead-light thead td, .thead-light th { 
+  background-color: #f8f9fa; }
+
+.thead-primary thead td, .thead-primary th,
+.thead-secondary thead td, .thead-secondary th,
+.thead-success thead td, .thead-success th,
+.thead-warning thead td, .thead-warning th,
+.thead-danger thead td, .thead-danger th,
+.thead-info thead td, .thead-info th,
+.thead-dark thead td, .thead-dark th { 
+  color: #fff;
+}
+.thead-light thead td, .thead-light th { 
+  color: #212529;
+}
 
 /* Table with colored header correct to fill svgs with white color */
 .thead-primary > thead> tr > td svg, .thead-primary > thead> tr > th svg,
@@ -74,9 +93,10 @@ April 13, 2018
 .thead-warning > thead> tr > td svg, .thead-warning > thead> tr > th svg,
 .thead-danger > thead> tr > td svg, .thead-danger > thead> tr > th svg,
 .thead-info > thead> tr > td svg, .thead-info > thead> tr > th svg,
-.thead-dark > thead> tr > td svg, .thead-dark > thead> tr > th svg
- {fill:#ffffff; padding:0 0 3px 0; }
-
+.thead-dark > thead> tr > td svg, .thead-dark > thead> tr > th svg {
+  fill: #fff; 
+  padding: 0 0 3px 0; 
+}
 
 .thead-primary th .tc-tiddlylink, .thead-primary th a,
 .thead-secondary th .tc-tiddlylink, .thead-primary th a,
@@ -84,4 +104,6 @@ April 13, 2018
 .thead-warning th .tc-tiddlylink, .thead-primary th a,
 .thead-danger th .tc-tiddlylink, .thead-primary th a,
 .thead-info th .tc-tiddlylink, .thead-primary th a,
-.thead-dark th .tc-tiddlylink, .thead-primary th a{color:#ffffff}
+.thead-dark th .tc-tiddlylink, .thead-primary th a {
+  color: #fff;
+}

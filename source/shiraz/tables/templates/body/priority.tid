@@ -7,27 +7,35 @@ type: text/vnd.tiddlywiki
 <svg width="12" height="12" >
 <circle cx="6" cy="6" r="5" stroke=<<stcolor>>  fill=<<fill>> stroke-width="1"/>
 </svg>
-\end
+\end circle
 
 \procedure show-cell()
 	<%if [<currentRecord>get<currentColumn>match[5]] %>
-		<$transclude $variable="circle" stcolor="#dc3545" fill="#f8d7da"/>&nbsp;very high
+		<$transclude $variable="circle" stcolor="#dc3545" fill="#f8d7da"/>&nbsp;<<shiraz-tables-lingo "Priority/very-high">>
 	<%elseif [<currentRecord>get<currentColumn>match[4]] %>
-		<$transclude $variable="circle" stcolor="#ff8c00" fill="#fff3cd"/>&nbsp;high
+		<$transclude $variable="circle" stcolor="#ff8c00" fill="#fff3cd"/>&nbsp;<<shiraz-tables-lingo "Priority/high">>
 	<%elseif [<currentRecord>get<currentColumn>match[3]] %>
-		<$transclude $variable="circle" stcolor="#17a2b8" fill="#d1ecf1"/>&nbsp;normal
+		<$transclude $variable="circle" stcolor="#17a2b8" fill="#d1ecf1"/>&nbsp;<<shiraz-tables-lingo "Priority/normal">>
 	<%elseif [<currentRecord>get<currentColumn>match[2]] %>
-		<$transclude $variable="circle" stcolor="#007bff" fill="#cce5ff"/>&nbsp;low
+		<$transclude $variable="circle" stcolor="#007bff" fill="#cce5ff"/>&nbsp;<<shiraz-tables-lingo "Priority/low">>
 	<%elseif [<currentRecord>get<currentColumn>match[1]] %>
-		<$transclude $variable="circle" stcolor="#6c757d" fill="#e2e3e5"/>&nbsp;very low
+		<$transclude $variable="circle" stcolor="#6c757d" fill="#e2e3e5"/>&nbsp;<<shiraz-tables-lingo "Priority/very-low">>
 	<%endif%>
-\end
+\end show-cell
 
 \procedure show-cell-locked() <span class="shiraz-dtable-locked-cell"><<show-cell>></span>
 
 \procedure select_priority()
-<$select tiddler=<<currentRecord>> field=<<currentColumn>> default=""><option value=''>Select...</option><option value='5'>very high</option><option value='4'>high</option><option value='3'>normal</option><option value='2'>low</option><option value='1'>very low</option><option value=''>no priority</option></$select>
-\end
+<$select tiddler=<<currentRecord>> field=<<currentColumn>> default="">
+<option value=''><<shiraz-tables-lingo "Priority/Select">></option>
+<option value='5'><<shiraz-tables-lingo "Priority/very-high">></option>
+<option value='4'><<shiraz-tables-lingo "Priority/high">></option>
+<option value='3'><<shiraz-tables-lingo "Priority/normal">></option>
+<option value='2'><<shiraz-tables-lingo "Priority/low">></option>
+<option value='1'><<shiraz-tables-lingo "Priority/very-low">></option>
+<option value=''><<shiraz-tables-lingo "Priority/no-priority">></option>
+</$select>
+\end select_priority
 
 <td class="shiraz-dtable-priority">
 <%if [<tempTableEdit>is[missing]] :or[<tempTableEdit>getindex[mode]!match[edit]] %>
@@ -38,7 +46,6 @@ type: text/vnd.tiddlywiki
 	<<select_priority>>
 <%endif%>
 </td>
-
 
 <!-- Part of Task Manager
    this template ALWAYS works on fields

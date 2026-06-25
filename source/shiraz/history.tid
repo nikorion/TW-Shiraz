@@ -1,4 +1,9 @@
-title: $:/plugins/kookma/shiraz/history
+{
+  "name": "ls",
+  "arguments": {
+    "dirPath": "src/plugins/shiraz"
+  }
+}title: $:/plugins/kookma/shiraz/history
 type: text/vnd.tiddlywiki
 
 Full change log:  [[https://kookma.github.io/TW-Shiraz/#ChangeLog]]

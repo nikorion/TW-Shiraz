@@ -1,11 +1,11 @@
 list-after: 
 tags: $:/tags/ViewTemplate
-title: $:/plugins/kookma/shiraz/breadcrumbs/viewtemplate
+title: $:/plugins/kookma/shiraz/ui/breadcrumbs/viewtemplate
 type: text/vnd.tiddlywiki
 
 <%if [[$:/config/Shiraz]getindex[breadcrumbs-enabled]match[yes]] %>
 <div data-bs-theme=<<color-scheme>>  class="px-2 text-light-emphasis bg-light-subtle border border-light-subtle rounded-1">
-<$transclude $tiddler={{{ [[$:/config/Shiraz]getindex[breadcrumbs-type]else[$:/plugins/kookma/shiraz/breadcrumbs/historylist]] }}} $mode=block/>
+<$transclude $tiddler={{{ [[$:/config/Shiraz]getindex[breadcrumbs-type]else[$:/plugins/kookma/shiraz/ui/breadcrumbs/historylist]] }}} $mode=block/>
 <div class="tc-page-controls" style="font-size:small;">
 {{$:/core/ui/Buttons/home}}{{$:/core/ui/Buttons/close-others}}{{$:/core/ui/Buttons/close-all}}
 </div>

@@ -1,5 +1,5 @@
 .callout {
-  --callout-color: 68, 138, 255;
+  --callout-color: 68, 138, 255; /*rgb(68,138,255)*/
 }
 .callout {
   border-left-color: rgb(var(--callout-color));
