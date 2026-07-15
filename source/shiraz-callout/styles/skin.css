@@ -8,7 +8,8 @@
 .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
 }
-.callout-icon {
+.callout-icon, 
+.callout-fold {
  color: rgb(var(--callout-color));
 }
 .callout-title-inner {

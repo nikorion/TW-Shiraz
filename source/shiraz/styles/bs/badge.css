@@ -26,3 +26,7 @@
   position: relative;
   top: -1px;
 }
+
+.badge-pill {
+  border-radius: var(--bs-border-radius-pill);
+}

@@ -7,7 +7,6 @@ light-palette: $:/palettes/Vanilla
 
 \function f.day() [all[tiddlers+shadows]tag[$:/tags/Palette]] :filter[get[color-scheme]match[light]]
 \function f.night() [all[tiddlers+shadows]tag[$:/tags/Palette]] :filter[get[color-scheme]match[dark]]
-\function f.other() [all[tiddlers+shadows]tag[$:/tags/Palette]] -[f.day[]] -[f.night[]]
 
 \procedure selectPalette(title, filter, default, index)
 <label class="shiraz-switch-label"><$text text=<<title>>/></label>

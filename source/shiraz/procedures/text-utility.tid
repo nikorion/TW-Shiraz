@@ -2,6 +2,8 @@ tags: $:/tags/Global
 title: $:/plugins/kookma/shiraz/procedures/text-utility
 type: text/vnd.tiddlywiki
 
+\whitespace trim
+
 \procedure tc(src:"", color:"red") <span style=`color:$(color)$;`><<src>></span>
 \procedure bc(src:"", color:"yellow") <span style=`background-color:$(color)$;`><<src>></span>
 \procedure mono(src:"", class:"") <code class=`shiraz-mono $(class)$`><<src>></code>

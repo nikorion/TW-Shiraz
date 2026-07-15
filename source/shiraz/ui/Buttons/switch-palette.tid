@@ -8,7 +8,6 @@ type: text/vnd.tiddlywiki
 \procedure configTid() $:/config/Shiraz
 \procedure switchPeletteTid() $:/plugins/kookma/shiraz/ui/ControlPanel/switch-palette
 \function light-palette-default() [<switchPeletteTid>get[light-palette]]
-\function warm-palette-default() [<switchPeletteTid>get[warm-palette]]
 \function dark-palette-default() [<switchPeletteTid>get[dark-palette]]
 
 \procedure switchActions() <$action-setfield $tiddler="$:/palette" $field="text" $value=<<next-palette>> />
@@ -17,17 +16,15 @@ type: text/vnd.tiddlywiki
 
 <$let 
  selected-palettes={{{
-   [<configTid>getindex[light-palette]else<light-palette-default>]
-   [<configTid>getindex[warm-palette]else<warm-palette-default>]
-	 [<configTid>getindex[dark-palette]else<dark-palette-default>] :and[join[ ]] }}}
-	
+   	[<configTid>getindex[light-palette]else<light-palette-default>]
+	[<configTid>getindex[dark-palette]else<dark-palette-default>] :and[join[ ]] }}}
  default-palette={{{
-   [<configTid>get[light-palette]]
-	 [[$:/palettes/Vanilla]] :and[first[]] }}}					 
+   	[<configTid>get[light-palette]]
+	[[$:/palettes/Vanilla]] :and[first[]] }}}					 
  next-palette={{{
-   [[$:/palette]get[text]]
-  +[cycle<selected-palettes>] :and[last[]]
-  :else[<default-palette>] }}}				
+   	[[$:/palette]get[text]]
+  	+[cycle<selected-palettes>] :and[last[]]
+  	:else[<default-palette>] }}}				
 >
 <$button 
 			tooltip={{$:/language/Buttons/Shiraz/SwitchPalette/Hint}} 
