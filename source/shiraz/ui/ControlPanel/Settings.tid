@@ -6,52 +6,52 @@ type: text/vnd.tiddlywiki
 \procedure dynamictables-editortype() $:/config/shiraz/dynamictables/editor-type
 \procedure configTiddler() $:/config/Shiraz
 
-These settings let you customise the behaviour of Shiraz plugin.
+<<shiraz-lingo "Settings/Intro">>
 
 ---
 
-; Show Shiraz setting in more sidebar
+; <<shiraz-lingo-text "Settings/MoreSidebar/Caption">>
 
-: <$checkbox tiddler="$:/plugins/kookma/shiraz/ui/ControlPanel/Settings" 
-tag="$:/tags/MoreSideBar"> 
-Show setting in more sidebar
+: <$checkbox tiddler="$:/plugins/kookma/shiraz/ui/ControlPanel/Settings"
+tag="$:/tags/MoreSideBar">
+<<shiraz-lingo "Settings/MoreSidebar/Label">>
 </$checkbox>
 
-; Options
+; <<shiraz-lingo-text "Settings/Options/Caption">>
 
-: <$checkbox tiddler=<<configTiddler>> 
-index="colorify-ui-buttons" checked="yes"> 
-Colorify UI buttons
+: <$checkbox tiddler=<<configTiddler>>
+index="colorify-ui-buttons" checked="yes">
+<<shiraz-lingo "Settings/Options/ColorifyButtons">>
 </$checkbox>
 
 : <$checkbox tiddler=<<configTiddler>>
-index="view-toolbar-buttons-visibility" checked="yes"> 
-Hide tiddler's view toolbar and show on mouse hover
+index="view-toolbar-buttons-visibility" checked="yes">
+<<shiraz-lingo "Settings/Options/HideToolbar">>
 </$checkbox>
 
 : <$checkbox tiddler=<<configTiddler>>
-index="colorify-sidebar-active-tab" checked="yes"> 
-Colorify active sidebar tab
+index="colorify-sidebar-active-tab" checked="yes">
+<<shiraz-lingo "Settings/Options/ColorifyActiveTab">>
 </$checkbox>
 
-; Set dark and light palettes
+; <<shiraz-lingo-text "Settings/Palettes/Caption">>
 
 {{$:/plugins/kookma/shiraz/ui/ControlPanel/switch-palette}}
 
-; Breadcrumbs
+; <<shiraz-lingo-text "Settings/Breadcrumbs/Caption">>
 
 {{$:/plugins/kookma/shiraz/ui/ControlPanel/breadcrumbs}}
 
 ---
 
-; Choose Local Editor for Dynamic Table
+; <<shiraz-lingo-text "Settings/Editor/Caption">>
 
-: <$checkbox tiddler=<<dynamictables-editortype>> field="text" 
-checked="main-editor" unchecked="simple-textarea" default="simple-textarea"> 
-Use Tiddlywiki main editor 
+: <$checkbox tiddler=<<dynamictables-editortype>> field="text"
+checked="main-editor" unchecked="simple-textarea" default="simple-textarea">
+<<shiraz-lingo "Settings/Editor/Main">>
 </$checkbox>
 
-: <$checkbox tiddler=<<dynamictables-editortype>> field="text" 
-checked="simple-textarea" unchecked="main-editor" default="simple-textarea"> 
-Use simple text area 
+: <$checkbox tiddler=<<dynamictables-editortype>> field="text"
+checked="simple-textarea" unchecked="main-editor" default="simple-textarea">
+<<shiraz-lingo "Settings/Editor/Textarea">>
 </$checkbox>

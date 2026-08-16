@@ -5,16 +5,16 @@ type: text/vnd.tiddlywiki
 <dl>
 
 : <$checkbox tiddler="$:/config/Shiraz" index="breadcrumbs-enabled"
-checked="yes" unchecked="no">&nbsp;Display breadcrumbs</$checkbox>
+checked="yes" unchecked="no">&nbsp;<<shiraz-lingo "Settings/Breadcrumbs/Display">></$checkbox>
 
 <%if [[$:/config/Shiraz]getindex[breadcrumbs-enabled]else[yes]match[yes]] %>
 
 : <$checkbox tiddler="$:/config/Shiraz" index="breadcrumbs-type"
-checked="$:/plugins/kookma/shiraz/ui/breadcrumbs/storylist">&nbsp;Use `$:/StoryList` for breadcrumbs</$checkbox>
+checked="$:/plugins/kookma/shiraz/ui/breadcrumbs/storylist">&nbsp;<<shiraz-lingo "Settings/Breadcrumbs/StoryList">></$checkbox>
 
 : <$checkbox tiddler="$:/config/Shiraz" index="breadcrumbs-type"
 checked="$:/plugins/kookma/shiraz/ui/breadcrumbs/historylist"
-default="$:/plugins/kookma/shiraz/ui/breadcrumbs/historylist">&nbsp;Use `$:/HistoryList` for breadcrumbs</$checkbox>
+default="$:/plugins/kookma/shiraz/ui/breadcrumbs/historylist">&nbsp;<<shiraz-lingo "Settings/Breadcrumbs/HistoryList">></$checkbox>
 
 <%endif%>
 

@@ -7,13 +7,13 @@ type: text/vnd.tiddlywiki
 <svg width="1.5em" height="1.5em" >
 <circle cx="0.75em" cy="0.75em" r="0.74em" stroke=""  fill=<<__color__>>/>
 </svg>
-\end
+\end circle
 
 \define rect(color)
 <svg width="1.5em" height="1.5em">
   <rect width="1.5em" height="1.5em" fill=<<__color__>>/>
 </svg>
-\end
+\end rect
 
 \define btn-highlight-actions()
 <$list filter="[<modifier>match[alt]then[hlp]] [<modifier>match[shift]then[hls]] :else[<modifier>!match[ctrl]then[hl]]" variable="hlmac"><!--set the highlight macro -->
@@ -28,7 +28,7 @@ type: text/vnd.tiddlywiki
 <$action-sendmessage $message="tm-edit-tiddler" $param="$:/plugins/kookma/shiraz-formatter/config/highlight-colors"/>
 </$list>
 <$action-deletetiddler $tiddler=<<dropdown-state>>/>
-\end
+\end btn-highlight-actions
 
 \define btn-text-actions()
 <$list filter="[<modifier>!match[ctrl]]" variable=null><!--set the highlight macro -->
@@ -43,7 +43,7 @@ type: text/vnd.tiddlywiki
 <$action-sendmessage $message="tm-edit-tiddler" $param="$:/plugins/kookma/shiraz-formatter/config/text-colors"/>
 </$list>
 <$action-deletetiddler $tiddler=<<dropdown-state>>/>
-\end
+\end btn-text-actions
 
 <!-- helper macro -->
 \define save-selection()
@@ -52,7 +52,7 @@ type: text/vnd.tiddlywiki
  $param="save-selection"
  tiddler=<<qualify "$:/temp/text">>
 />
-\end
+\end save-selection
 
 \define btn-uppercase-actions()
 <<save-selection>>
@@ -61,7 +61,7 @@ type: text/vnd.tiddlywiki
  $param="replace-selection"
  text={{{[<qualify "$:/temp/text">get[text]uppercase[]]}}}
 />
-\end
+\end btn-uppercase-actions
 
 \define btn-lowercase-actions()
 <<save-selection>>
@@ -70,7 +70,7 @@ type: text/vnd.tiddlywiki
  $param="replace-selection"
  text={{{[<qualify "$:/temp/text">get[text]lowercase[]]}}}
 />
-\end
+\end btn-lowercase-actions
 
 \define btn-titlecase-actions()
 <<save-selection>>
@@ -79,11 +79,11 @@ type: text/vnd.tiddlywiki
  $param="replace-selection"
  text={{{[<qualify "$:/temp/text">get[text]lowercase[]titlecase[]]}}}
 />
-\end
+\end btn-titlecase-actions
 
 <!-- Display the highlight color -->
 <div class="kk-formatter-dropdown">
-<div class="kk-sh-formatter-label">Highlight color</div>
+<div class="kk-sh-formatter-label"><<shiraz-formatter-lingo "Dropdown/HighlightColor">></div>
 <$list filter="[enlist{$:/plugins/kookma/shiraz-formatter/config/highlight-colors}]" variable=color>
 <$button actions=<<btn-highlight-actions>> class="tc-btn-invisible" tooltip=<<color>> >
 <$macrocall $name=rect color=<<color>> />
@@ -93,7 +93,7 @@ type: text/vnd.tiddlywiki
 <hr/>
 <!-- Display the text colors -->
 <div class="kk-formatter-dropdown">
-<div class="kk-sh-formatter-label">Text color</div>
+<div class="kk-sh-formatter-label"><<shiraz-formatter-lingo "Dropdown/TextColor">></div>
 <$list filter="[enlist{$:/plugins/kookma/shiraz-formatter/config/text-colors}]" variable=color>
 <$button actions=<<btn-text-actions>> class="tc-btn-invisible" tooltip=<<color>> >
 <$macrocall $name=rect color=<<color>> />
@@ -103,14 +103,14 @@ type: text/vnd.tiddlywiki
 <hr/>
 <!-- Display the font transform buttons  -->
 <div class="kk-formatter-dropdown">
-<div style="width:100%;margin-bottom:10px;">Change case</div>
-<$button actions=<<btn-lowercase-actions>> class="tc-btn-invisible kk-sh-letter" tooltip="lower case" >
+<div style="width:100%;margin-bottom:10px;"><<shiraz-formatter-lingo "Dropdown/ChangeCase">></div>
+<$button actions=<<btn-lowercase-actions>> class="tc-btn-invisible kk-sh-letter" tooltip=<<shiraz-formatter-lingo-text "Dropdown/LowerCase">> >
 ''aa''
 </$button>
-<$button actions=<<btn-uppercase-actions>> class="tc-btn-invisible kk-sh-letter" tooltip="upper case" >
+<$button actions=<<btn-uppercase-actions>> class="tc-btn-invisible kk-sh-letter" tooltip=<<shiraz-formatter-lingo-text "Dropdown/UpperCase">> >
 ''AA''
 </$button>
-<$button actions=<<btn-titlecase-actions>> class="tc-btn-invisible kk-sh-letter" tooltip="title case" >
+<$button actions=<<btn-titlecase-actions>> class="tc-btn-invisible kk-sh-letter" tooltip=<<shiraz-formatter-lingo-text "Dropdown/TitleCase">> >
 ''Aa''
 </$button>
 </div>

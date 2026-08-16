@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 <%if [<tempTableEdit>getindex[mode]match[edit]] %>
 <th class="shiraz-dtable-svg">
   <span>
-  <$button class="tc-btn-invisible" tooltip="delete all records or move them to trashbin" aria-label="" actions=<<mark-for-delete>> >
+  <$button class="tc-btn-invisible" tooltip=<<shiraz-lingo-text "Tables/Delete/AllTooltip">> aria-label="" actions=<<mark-for-delete>> >
 	  {{$:/core/images/delete-button}}
   </$button>
   </span>

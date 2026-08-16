@@ -7,6 +7,6 @@ type: text/vnd.tiddlywiki
 <$list filter="[<entry>split[]match[*]]" variable=ignore>
 <span class="shiraz-star"><$transclude $tiddler="$:/core/images/star-filled" /></span>
 </$list>
-\end
+\end rate
 
 <!-- these procedures are used by table-csv to display entries -->

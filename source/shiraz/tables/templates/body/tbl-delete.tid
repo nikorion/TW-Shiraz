@@ -7,12 +7,12 @@ type: text/vnd.tiddlywiki
 \procedure move-record-to-trashbin() 
 	\import $:/plugins/kookma/trashbin/macros/move-to-trashbin
 	<$macrocall $name="move-to-trashbin" tiddler=<<currentRecord>> />
-\end
+\end move-record-to-trashbin
 
 <%if [<tempTableEdit>getindex[mode]match[edit]] %><!-- only works in edit mode-->
 	<$let doDelete= {{{ [[$:/plugins/kookma/trashbin]!is[missing]then[move-record-to-trashbin]else[delete-record]] }}} >
 		<td class="shiraz-dtable-svg">
-			<$button class="tc-btn-invisible" tooltip="delete this record or move it to trash" aria-label="" actions='<$transclude $variable=<<doDelete>>/>' >
+			<$button class="tc-btn-invisible" tooltip=<<shiraz-lingo-text "Tables/Delete/RecordTooltip">> aria-label="" actions='<$transclude $variable=<<doDelete>>/>' >
 				{{$:/core/images/delete-button}}
 			</$button>
 		</td>

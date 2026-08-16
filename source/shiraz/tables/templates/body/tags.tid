@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[<currentRecord>tags[]sort[title]]  :except[subfilter<sv-exclude-tags>]">
 <$transclude tiddler="$:/plugins/kookma/shiraz/tables/templates/body/tag-template"/>
 </$list>
-\end
+\end show-cell
 
 \procedure show-cell-locked()  <span class=""><<show-cell>></span>
 
@@ -24,7 +24,7 @@ type: text/vnd.tiddlywiki
 </$vars>
 </$let>
 </div>
-\end
+\end edit-cell
 
 
 <td>

@@ -3,7 +3,7 @@ title: $:/plugins/kookma/shiraz/tables/procs/dt-table-dynamic
 type: text/vnd.tiddlywiki
 
 \procedure table-dynamic(filter, fields:"", indexes:"", sortType:"string", caption:"", class:"",
-                  footerRows:"0", stateTiddler:"", editButton:"yes", pagination:"no", emptyMessage:"filter input is empty")
+                  footerRows:"0", stateTiddler:"", editButton:"yes", pagination:"no", emptyMessage:"<<shiraz-lingo Tables/EmptyMessage>>")
 
 <!--above commands import utility macros-->
 \import [all[shadows+tiddlers]tag[$:/tags/Table/Procedure]!is[draft]]
@@ -53,4 +53,4 @@ type: text/vnd.tiddlywiki
 	<$transclude $variable="emptyMessage" />
 <%endif%><!--check the input filter is not empty -->
 </$let>
-\end
+\end table-dynamic

@@ -9,28 +9,27 @@ type: text/vnd.tiddlywiki
 	</$let>
 	<div data-bs-theme=<<color-scheme>> class=<<__srcClass__>>>
 		<%if [<__src__>has[title]] %>
-		<$transclude $tiddler=<<__src__>> $mode="block"/>
+			<$transclude $tiddler=<<__src__>> $mode="block"/>
 		<%else%>
-		<$transclude $variable="src" $mode="block"/>
+			<$transclude $variable="src" $mode="block"/>
 		<%endif%>			
 	</div>
 </details>
-\end
+\end details
 
 <!---- FAQS using details ---->
 
 \procedure faqs-details(filter, status:"closed", labelClass:"alert alert-secondary py-1 my-2", srcClass:"alert border-secondary py-0")
-
 \function tmpSearchTid()   [[$:/temp/shiraz/qa/search-details]] [<currentTiddler>] +[join[/]]
 \function searchTerm()     [<tmpSearchTid>get[text]]
 
 <$keyboard key="escape" actions='<$action-setfield $tiddler=<<tmpSearchTid>> $field="text" $value=""/>'>
-<$edit-text tiddler=<<tmpSearchTid>> field=text tag=input default="" placeholder="Search in titles" class="alert alert-info w-100"/>
+<$edit-text tiddler=<<tmpSearchTid>> field=text tag=input default="" placeholder=<<shiraz-lingo-text "Search/InTitles">> class="alert alert-info w-100"/>
 </$keyboard>
 
 <$list filter="[subfilter<filter>search:title<searchTerm>]">
-<$transclude $variable=details label=<<currentTiddler>>  src=<<currentTiddler>> 
-status=<<status>> labelClass=<<labelClass>> srcClass=<<srcClass>> />
+<$transclude $variable=details label=<<currentTiddler>>  src=<<currentTiddler>>
+			 status=<<status>> labelClass=<<labelClass>> srcClass=<<srcClass>>/>
 </$list>
 
 \end faqs-details

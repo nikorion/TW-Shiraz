@@ -4,26 +4,26 @@ type: text/vnd.tiddlywiki
 
 \procedure slider(label, src, status:"closed", labelClass, srcClass)
 <$let stateTiddler = {{{ [[$:/state/shiraz/slider]][<currentTiddler>][<label>] +[join[/]] }}}
-       condition  = {{{ [<stateTiddler>!is[missing]] :then[<stateTiddler>get[text]] :else[<status>] }}}  > 
-<h3 data-bs-theme=<<color-scheme>> class=<<labelClass>> >
+      condition    = {{{ [<stateTiddler>!is[missing]] :then[<stateTiddler>get[text]] :else[<status>] }}}> 
+<h3 data-bs-theme=<<color-scheme>> class=<<labelClass>>>
 <%if [<condition>match[open]] %>
-	<$button class="tc-btn-invisible tc-tiddlylink" actions='<$action-setfield $tiddler=<<stateTiddler>> text="closed"/>' >
-      	<span class="shiraz-slider"><$transclude tiddler="$:/core/images/down-arrow" /></span>
-    </$button>
+<$button class="tc-btn-invisible tc-tiddlylink" actions='<$action-setfield $tiddler=<<stateTiddler>> text="closed"/>'>
+    <span class="shiraz-slider"><$transclude tiddler="$:/core/images/down-arrow"/></span>
+</$button>
 <%else%>
-	<$button class="tc-btn-invisible tc-tiddlylink" actions='<$action-setfield $tiddler=<<stateTiddler>> text="open"/>' >
-		<span class="shiraz-slider"><$transclude tiddler="$:/core/images/right-arrow" /></span>
-	</$button>
+<$button class="tc-btn-invisible tc-tiddlylink" actions='<$action-setfield $tiddler=<<stateTiddler>> text="open"/>'>
+	<span class="shiraz-slider"><$transclude tiddler="$:/core/images/right-arrow"/></span>
+</$button>
 <%endif%>
 <$let tv-wikilinks="no"><<label>></$let>
 </h3>
 <%if [<condition>match[open]] %>
-	<div data-bs-theme=<<color-scheme>> class=<<srcClass>> >
-		<%if [<src>has[title]] %>
-			<$transclude $tiddler=<<src>> $mode="block"/>
-		<%else%>
-			<$transclude $variable="src" $mode="block"/>
-		<%endif%>			
+<div data-bs-theme=<<color-scheme>> class=<<srcClass>>>
+	<%if [<src>has[title]] %>
+	<$transclude $tiddler=<<src>> $mode="block"/>
+	<%else%>
+	<$transclude $variable="src" $mode="block"/>
+	<%endif%>			
 	</div>
 <%endif%>
 </$let>
@@ -34,7 +34,7 @@ type: text/vnd.tiddlywiki
 \procedure faqs-slider(filter, status:"closed", labelClass:"alert alert-info", srcClass:"alert border-secondary")
 
 \procedure expand-all()
-<$list filter=<<filter>> >
+<$list filter=<<filter>>>
   	<$action-setfield $tiddler=<<revealStateTid>> text="open"/>
 </$list>
 \end expand-all
@@ -50,14 +50,14 @@ type: text/vnd.tiddlywiki
 \function searchTerm()     [<tmpSearchTid>get[text]]
 
 <$keyboard key="escape" actions='<$action-setfield $tiddler=<<tmpSearchTid>> text=""/>'>
-	<$edit-text tiddler=<<tmpSearchTid>> field="text" tag=input default="" placeholder="Search" class="alert alert-info tc-max-width"/>
+	<$edit-text tiddler=<<tmpSearchTid>> field="text" tag=input default="" placeholder=<<shiraz-lingo-text "Search/Placeholder">> class="alert alert-info tc-max-width"/>
 </$keyboard>
 
 <$button actions=<<expand-all>> class="btn btn-secondary btn-sm">Expand all</$button>
 <$button actions=<<close-all>>  class="btn btn-secondary btn-sm">Close all</$button>
 
 <$list filter="[subfilter<filter>search:title<searchTerm>]">
-	<$transclude $variable="slider" label=<<currentTiddler>> src=<<currentTiddler>> status=<<status>> labelClass=<<labelClass>> srcClass=<<srcClass>> />
+	<$transclude $variable="slider" label=<<currentTiddler>> src=<<currentTiddler>> status=<<status>> labelClass=<<labelClass>> srcClass=<<srcClass>>/>
 </$list>
 
 \end faqs-slider

@@ -5,10 +5,10 @@ type: text/vnd.tiddlywiki
 
 \procedure check-actions()
 		<$action-setfield $tiddler=<<currentRecord>> status="complete"/>
-\end
+\end check-actions
 \procedure unchek-actions()
 		<$action-setfield $tiddler=<<currentRecord>> status="rework"/>
-\end
+\end unchek-actions
 
 <td td class="shiraz-dtable-svg">
 	<$checkbox tiddler=<<currentRecord>> tag="Done" checkactions=<<check-actions>> uncheckactions=<<unchek-actions>> />

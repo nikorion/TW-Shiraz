@@ -1,5 +1,5 @@
-.table-tight {
-	font-size: 0.8em;
+.table-tight { 
+  font-size: 0.8em; 
 }
 
 /*
@@ -8,8 +8,8 @@ April 13, 2018
 */
 
 /*center aligned table*/
-.table-center {
- margin: 0 auto;
+.table-center { 
+  margin: 0 auto; 
 }
 
 /* Table caption at top */
@@ -19,12 +19,12 @@ April 13, 2018
 }
 
 /* Striped row table */
-.table-striped-row tr:nth-child(even) td {
+.table-striped-row tr:nth-child(even) td { 
   background-color: #F3F6F6; 
 }
 /* Striped column table */
-.table-striped-col tbody tr td:nth-child(odd) {
-	background-color: #F3F6F6;
+.table-striped-col tbody tr td:nth-child(odd) { 
+  background-color: #F3F6F6; 
 }
 
 /*Borderless table*/
@@ -32,58 +32,64 @@ April 13, 2018
 .table-borderless thead td, 
 .table-borderless th, 
 .table-borderless tr, 
-.table-borderless td {
-  border: 0;
+.table-borderless td { 
+  border: 0; 
 }
 
 /* Table lines should be used with table-borderless for abbreviations and two column layout */
 .table-lines thead td, .table-lines th {
-   border-bottom: 2px solid #ddd;
+   border-bottom: 2px solid #dddddd;
 	 background-color: unset;
 }
 .table-lines td {
-   border-bottom: 1px solid #ddd;
+   border-bottom: 1px solid #dddddd;
    background-color: unset;
 }
 
 /* Table hover (yellow background on mouse over) */
 .table-hover tbody tr:hover {
   color: #212529;
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6; 
+}
 .table-hover-yellow tbody tr:hover { 
-  background-color: #ffc; }
-.table-hover-cyan tbody tr:hover { 
-  background-color: #e6ffff; }
+  background-color: #ffc; 
+}
+.table-hover-cyan tbody tr:hover {   
+  background-color: #e6ffff; 
+}
 
 /* Table with colored header */
 .thead-primary thead td, .thead-primary th { 
-  background-color: #007bff; }
+  background-color: #007bff; 
+  color: #fff; 
+}
 .thead-secondary thead td, .thead-secondary th { 
-  background-color: #6c757d; }
+  background-color: #6c757d; 
+  color: #fff; 
+}
 .thead-success thead td, .thead-success th { 
-  background-color: #28a745; }
+  background-color: #28a745; 
+  color: #fff; 
+}
 .thead-warning thead td, .thead-warning th { 
-  background-color: #ffc107; }
+  background-color: #ffc107; 
+  color: #fff; 
+}
 .thead-danger thead td, .thead-danger th { 
-  background-color: #dc3545; }
+  background-color: #dc3545; 
+  color: #fff; 
+}
 .thead-info thead td, .thead-info th { 
-  background-color: #17a2b8; }
+  background-color: #17a2b8; 
+  color: #fff; 
+}
 .thead-dark thead td, .thead-dark th { 
-  background-color: #343a40; }
-.thead-light thead td, .thead-light th { 
-  background-color: #f8f9fa; }
-
-.thead-primary thead td, .thead-primary th,
-.thead-secondary thead td, .thead-secondary th,
-.thead-success thead td, .thead-success th,
-.thead-warning thead td, .thead-warning th,
-.thead-danger thead td, .thead-danger th,
-.thead-info thead td, .thead-info th,
-.thead-dark thead td, .thead-dark th { 
-  color: #fff;
+  background-color: #343a40; 
+  color: #fff; 
 }
 .thead-light thead td, .thead-light th { 
-  color: #212529;
+  background-color: #f8f9fa; 
+  color: #212529; 
 }
 
 /* Table with colored header correct to fill svgs with white color */
@@ -94,8 +100,7 @@ April 13, 2018
 .thead-danger > thead> tr > td svg, .thead-danger > thead> tr > th svg,
 .thead-info > thead> tr > td svg, .thead-info > thead> tr > th svg,
 .thead-dark > thead> tr > td svg, .thead-dark > thead> tr > th svg {
-  fill: #fff; 
-  padding: 0 0 3px 0; 
+  fill: #ffffff; padding: 0 0 3px 0; 
 }
 
 .thead-primary th .tc-tiddlylink, .thead-primary th a,
@@ -104,6 +109,6 @@ April 13, 2018
 .thead-warning th .tc-tiddlylink, .thead-primary th a,
 .thead-danger th .tc-tiddlylink, .thead-primary th a,
 .thead-info th .tc-tiddlylink, .thead-primary th a,
-.thead-dark th .tc-tiddlylink, .thead-primary th a {
-  color: #fff;
+.thead-dark th .tc-tiddlylink, .thead-primary th a { 
+  color: #ffffff; 
 }

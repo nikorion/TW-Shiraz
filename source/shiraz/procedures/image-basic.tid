@@ -7,4 +7,4 @@ type: text/vnd.tiddlywiki
   <$image source=<<img>> tooltip=<<tooltip>> alt=<<alt>> /> 
   <figcaption><<caption>></figcaption>
 </figure> 
-\end
+\end image-basic

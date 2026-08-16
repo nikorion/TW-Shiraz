@@ -7,6 +7,7 @@
   --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
   --bs-badge-border-radius: var(--bs-border-radius);
+
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
   font-size: var(--bs-badge-font-size);
@@ -29,4 +30,6 @@
 
 .badge-pill {
   border-radius: var(--bs-border-radius-pill);
+  padding-left: .6em;
+  padding-right: .6em;
 }

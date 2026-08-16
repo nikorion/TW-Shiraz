@@ -1,0 +1,13 @@
+title: $:/plugins/kookma/shiraz/language/fr-FR/readme
+type: text/vnd.tiddlywiki
+
+; Shiraz
+Shiraz est un petit cadre de feuilles de style, de modèles et de macros permettant de créer des contenus soignés dans TiddlyWiki. Shiraz propose des éléments personnalisés : alertes, cartes, panneaux, images, tableaux statiques, tableaux dynamiques, tableaux rapides, badges, textes, etc. Shiraz reprend, en les modifiant, certaines classes CSS de [[Bootstrap|https://getbootstrap.com/]] 5.3.3.
+
+Cette version s'appuie sur TiddlyWiki 5.3.5 et n'est pas totalement rétrocompatible. Pour la rétrocompatibilité, utiliser Shiraz 2.x.x (par exemple 2.9.5) ou antérieur.
+
+;Code et démonstration
+Pour découvrir les fonctionnalités du plugin, sa syntaxe, des tutoriels et des exemples, voir les pages de démonstration et de code
+
+* Démonstration : https://kookma.github.io/TW-Shiraz/
+* Code : https://github.com/kookma/TW-Shiraz

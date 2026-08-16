@@ -1,0 +1,25 @@
+title: $:/plugins/kookma/shiraz-formatter/language/lingo
+tags: $:/tags/Global
+
+<!--
+Résolution i18n de shiraz-formatter. Voir le lingo de shiraz pour le détail du
+montage : `shiraz-formatter-lingo` rend le wikitext, `shiraz-formatter-lingo-text`
+renvoie la chaîne brute (attributs `tooltip=`, titres). La cascade
+langue→en-GB→clé est répétée dans chacune, elle ne peut pas être factorisée.
+
+Ce sous-plugin porte son propre lingo plutôt que d'emprunter celui de shiraz :
+`parent-plugin` regroupe à l'affichage, il ne garantit pas la présence du parent.
+-->
+
+\procedure shiraz-formatter-lingo(title)
+\whitespace trim
+<$let _lang={{{ [[$:/language]get[text]get[name]else[en-GB]] }}}>
+<$transclude $tiddler={{{ [[$:/plugins/kookma/shiraz-formatter/language/]addsuffix<_lang>addsuffix[/]addsuffix<title>] }}}>
+<$transclude $tiddler={{{ [[$:/plugins/kookma/shiraz-formatter/language/en-GB/]addsuffix<title>] }}}/>
+</$transclude>
+</$let>
+\end shiraz-formatter-lingo
+
+\function shiraz-formatter-lingo-text(title)
+[[$:/language]get[text]get[name]else[en-GB]addprefix[$:/plugins/kookma/shiraz-formatter/language/]addsuffix[/]addsuffix<title>get[text]] :else[[$:/plugins/kookma/shiraz-formatter/language/en-GB/]addsuffix<title>get[text]] :else[<title>]
+\end shiraz-formatter-lingo-text

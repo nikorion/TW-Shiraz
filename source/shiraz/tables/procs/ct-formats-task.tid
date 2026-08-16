@@ -17,7 +17,7 @@ in=  {{{ [<row>addsuffix<lbr>] }}}
 out= {{{ [<row>splitregexp<delimiter>rest[]join<delimiter>addprefix<delimiter>addprefix<param>addsuffix<lbr>]}}} >
     <$action-setfield $tiddler=<<src>> text={{{ [<src>get[text]search-replace:g:<in>,<out>] }}}/>
 </$let>	
-\end
+\end todo-action
 
 \procedure todo()
 <%if [<entry>trim[]match[-]] %><!-- show task item -->

@@ -11,15 +11,15 @@ type: text/vnd.tiddlywiki
 
 \procedure show-cell()
 	<%if [<currentRecord>get<currentColumn>match[5]] %>
-		<$transclude $variable="circle" stcolor="#dc3545" fill="#f8d7da"/>&nbsp;<<shiraz-tables-lingo "Priority/very-high">>
+		<$transclude $variable="circle" stcolor="#dc3545" fill="#f8d7da"/>&nbsp;<<shiraz-lingo "Tables/Priority/very-high">>
 	<%elseif [<currentRecord>get<currentColumn>match[4]] %>
-		<$transclude $variable="circle" stcolor="#ff8c00" fill="#fff3cd"/>&nbsp;<<shiraz-tables-lingo "Priority/high">>
+		<$transclude $variable="circle" stcolor="#ff8c00" fill="#fff3cd"/>&nbsp;<<shiraz-lingo "Tables/Priority/high">>
 	<%elseif [<currentRecord>get<currentColumn>match[3]] %>
-		<$transclude $variable="circle" stcolor="#17a2b8" fill="#d1ecf1"/>&nbsp;<<shiraz-tables-lingo "Priority/normal">>
+		<$transclude $variable="circle" stcolor="#17a2b8" fill="#d1ecf1"/>&nbsp;<<shiraz-lingo "Tables/Priority/normal">>
 	<%elseif [<currentRecord>get<currentColumn>match[2]] %>
-		<$transclude $variable="circle" stcolor="#007bff" fill="#cce5ff"/>&nbsp;<<shiraz-tables-lingo "Priority/low">>
+		<$transclude $variable="circle" stcolor="#007bff" fill="#cce5ff"/>&nbsp;<<shiraz-lingo "Tables/Priority/low">>
 	<%elseif [<currentRecord>get<currentColumn>match[1]] %>
-		<$transclude $variable="circle" stcolor="#6c757d" fill="#e2e3e5"/>&nbsp;<<shiraz-tables-lingo "Priority/very-low">>
+		<$transclude $variable="circle" stcolor="#6c757d" fill="#e2e3e5"/>&nbsp;<<shiraz-lingo "Tables/Priority/very-low">>
 	<%endif%>
 \end show-cell
 
@@ -27,13 +27,13 @@ type: text/vnd.tiddlywiki
 
 \procedure select_priority()
 <$select tiddler=<<currentRecord>> field=<<currentColumn>> default="">
-<option value=''><<shiraz-tables-lingo "Priority/Select">></option>
-<option value='5'><<shiraz-tables-lingo "Priority/very-high">></option>
-<option value='4'><<shiraz-tables-lingo "Priority/high">></option>
-<option value='3'><<shiraz-tables-lingo "Priority/normal">></option>
-<option value='2'><<shiraz-tables-lingo "Priority/low">></option>
-<option value='1'><<shiraz-tables-lingo "Priority/very-low">></option>
-<option value=''><<shiraz-tables-lingo "Priority/no-priority">></option>
+<option value=''><<shiraz-lingo "Tables/Select">></option>
+<option value='5'><<shiraz-lingo "Tables/Priority/very-high">></option>
+<option value='4'><<shiraz-lingo "Tables/Priority/high">></option>
+<option value='3'><<shiraz-lingo "Tables/Priority/normal">></option>
+<option value='2'><<shiraz-lingo "Tables/Priority/low">></option>
+<option value='1'><<shiraz-lingo "Tables/Priority/very-low">></option>
+<option value=''><<shiraz-lingo "Tables/Priority/no-priority">></option>
 </$select>
 \end select_priority
 

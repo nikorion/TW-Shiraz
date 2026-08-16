@@ -1,0 +1,10 @@
+title: $:/plugins/kookma/shiraz-formatter/language/en-GB/history
+type: text/vnd.tiddlywiki
+
+Full change log  https://kookma.github.io/TW-Shiraz/shiraz-formatter.html#ChangeLog
+
+* ''0.7.0'' -- 2026.08.17 -- Localised the plugin: new `language/lingo.tid` (`shiraz-formatter-lingo` + `shiraz-formatter-lingo-text`) with strings split into `common` and `snippets` `.multids` per language, covering the editor toolbar button, the formatter dropdown and the 15 snippet captions. `readme`, `history` and `license` became language selectors; the licence body stays in English. Snippet bodies were neutralised — empty sample values, like the 12 snippets that already were — because the core stamp dropdown inserts the text field raw and it therefore cannot be language-dependent; the `table-dynamic` snippet also dropped its hardcoded `emptyMessage`, so it now inherits the translated default. Full French translation added.
+* ''0.6.2'' -- 2025.07.07 -- updated to TiddlyWiki 5.3.7
+* ''0.6.1'' -- 2024.09.13 -- updated to TiddlyWiki 5.3.5
+* ''0.5.1'' -- 2022.09.27 -- stable and improved release
+* ''0.1.0'' -- 2022.09.23 -- first public release

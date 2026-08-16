@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 <svg width=<<width>> height=<<height>> >
 <rect width=<<width>> height=<<height>> x="0" y="0" rx="10" ry="10" stroke=<<stroke-color>>  fill=<<fill>> stroke-width="0"/>
 </svg>
-\end
+\end box
 \procedure show-cell()   <$transclude $variable=box fill={{{ [<currentRecord>get[color]else[transparent]] }}}/>
 \procedure show-cell-locked()  <span class=""><<show-cell>></span>
 \procedure edit-cell() <$edit-text tag=input type=color tiddler=<<currentRecord>> field=<<currentColumn>>/>

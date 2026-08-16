@@ -13,18 +13,18 @@ type: text/vnd.tiddlywiki
 </th>
 </tr>
 <%endif%>
-\end
+\end confirm-delete
 
 \procedure ask-for-delete()
 	\whitespace notrim
-	Delete all <$count filter="[subfilter<inputFilter>]"/> records?
-	<$button class="tc-btn-invisible" tooltip="mark for delete" actions='<$action-setfield $tiddler="$:/temp/dynamictables/delete-all-records" $index=<<currentTable>> $value="delete-confirmed"/>'>
-		{{$:/core/images/delete-button}} yes
-	</$button> or 
-	<$button class="tc-btn-invisible" tooltip="cancel delete" actions='<$action-setfield $tiddler="$:/temp/dynamictables/delete-all-records" $index=<<currentTable>>/>'>
-		{{$:/core/images/close-button}} no
+	<<shiraz-lingo "Tables/Delete/ConfirmAll">>
+	<$button class="tc-btn-invisible" tooltip=<<shiraz-lingo-text "Tables/Delete/MarkTooltip">> actions='<$action-setfield $tiddler="$:/temp/dynamictables/delete-all-records" $index=<<currentTable>> $value="delete-confirmed"/>'>
+		{{$:/core/images/delete-button}} <<shiraz-lingo "Tables/Delete/Yes">>
+	</$button> <<shiraz-lingo "Tables/Delete/Or">>
+	<$button class="tc-btn-invisible" tooltip=<<shiraz-lingo-text "Tables/Delete/CancelTooltip">> actions='<$action-setfield $tiddler="$:/temp/dynamictables/delete-all-records" $index=<<currentTable>>/>'>
+		{{$:/core/images/close-button}} <<shiraz-lingo "Tables/Delete/No">>
 	</$button>
-\end
+\end ask-for-delete
 
 <!--actions for perform-delete button-->
 \procedure delete-all-records-action() 
@@ -38,15 +38,15 @@ type: text/vnd.tiddlywiki
 			<$transclude $variable="move-to-trashbin" tiddler=<<currentRecord>> />
 		</$list>
 	<%endif%>
-\end		 
+\end delete-all-records-action
 
 \procedure perform-delete()
 \whitespace notrim
-	Warning! this action cannot be undone!
-	<$button class="tc-btn-invisible" tooltip="delete all records or move to trashbin" actions=<<delete-all-records-action>> >
-		{{$:/core/images/delete-button}}  delete 
-	</$button> or 
-	<$button class="tc-btn-invisible" tooltip="cancel the operation" actions='<$action-setfield $tiddler="$:/temp/dynamictables/delete-all-records" $index=<<currentTable>>/>'>
-		{{$:/core/images/close-button}} cancel 
+	<<shiraz-lingo "Tables/Delete/Warning">>
+	<$button class="tc-btn-invisible" tooltip=<<shiraz-lingo-text "Tables/Delete/PerformTooltip">> actions=<<delete-all-records-action>> >
+		{{$:/core/images/delete-button}}  <<shiraz-lingo "Tables/Delete/Perform">>
+	</$button> <<shiraz-lingo "Tables/Delete/Or">>
+	<$button class="tc-btn-invisible" tooltip=<<shiraz-lingo-text "Tables/Delete/CancelOpTooltip">> actions='<$action-setfield $tiddler="$:/temp/dynamictables/delete-all-records" $index=<<currentTable>>/>'>
+		{{$:/core/images/close-button}} <<shiraz-lingo "Tables/Delete/Cancel">>
 	</$button>
-\end
+\end perform-delete

@@ -1,0 +1,11 @@
+title: $:/plugins/kookma/shiraz-formatter/language/fr-FR/readme
+type: text/vnd.tiddlywiki
+
+; Shiraz Formatter
+Boutons de barre d'outils de l'éditeur pour mettre en forme le texte et insérer des extraits.
+
+;Code et démonstration
+Pour découvrir les fonctionnalités du plugin, sa syntaxe, des tutoriels et des exemples, voir les pages de démonstration et de code
+
+* Démonstration : https://kookma.github.io/TW-Shiraz/shiraz-formatter.html
+* Code : https://github.com/kookma/TW-Shiraz

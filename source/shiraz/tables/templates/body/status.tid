@@ -5,17 +5,36 @@ type: text/vnd.tiddlywiki
 
 \function status-values() open in-work on-hold complete rework closed
 
+<!--
+status-label traduit la valeur affichée sans toucher à la valeur STOCKÉE dans le
+champ : celle-ci reste canonique (`open`, `in-work`, …), comme les 1-5 de
+priority.tid. Sinon changer la langue du wiki orphelinerait les enregistrements
+déjà saisis et rendrait le champ illisible d'une langue à l'autre.
+
+La cascade est écrite ici plutôt que déléguée à shiraz-lingo-text pour que le
+dernier repli soit la valeur BRUTE et non la clé : un utilisateur qui remplace
+status-values par ses propres statuts les voit tels quels, pas sous la forme
+`Tables/Status/son-statut`. Fonction sans paramètre lisant statusValue dans la
+portée ambiante — une \function custom en opérateur de filtre ne lie pas son
+opérande (`[ma-fn<arg>]` renvoie vide en TW 5.4).
+-->
+\function status-label()
+[[$:/language]get[text]get[name]else[en-GB]addprefix[$:/plugins/kookma/shiraz/language/]addsuffix[/Tables/Status/]addsuffix<statusValue>get[text]] :else[[$:/plugins/kookma/shiraz/language/en-GB/Tables/Status/]addsuffix<statusValue>get[text]] :else[<statusValue>]
+\end status-label
+
 \procedure show-cell()
-<$let val={{{ [<currentRecord>get<currentColumn>] }}}><<val>></$let>
+<$let statusValue={{{ [<currentRecord>get<currentColumn>] }}}>
+<$text text={{{ [function[status-label]] }}}/>
+</$let>
 \end show-cell
 
 \procedure show-cell-locked() <span class="shiraz-dtable-locked-cell"><<show-cell>></span>
 
 \procedure select_status()
 <$select tiddler=<<currentRecord>> field=<<currentColumn>> default="">
-	<option value=''>Select...</option>
-	<$list filter="[function[status-values]]" variable=status>
-		<option value=<<status>>><<status>></option>
+	<option value=''><<shiraz-lingo "Tables/Select">></option>
+	<$list filter="[function[status-values]]" variable=statusValue>
+		<option value=<<statusValue>>><$text text={{{ [function[status-label]] }}}/></option>
 	</$list>
 </$select>
 \end select_status
@@ -32,4 +51,6 @@ type: text/vnd.tiddlywiki
 
 <!-- Part of Task Manager
   this template ALWAYS works on fields
-  change default status values `open in-work on-hold complete rework closed` as you like-->
+  change default status values `open in-work on-hold complete rework closed` as you like;
+  add the matching Tables/Status/<value> keys in language/<lang>/tables.multids to
+  translate them, otherwise the raw value is displayed as is-->

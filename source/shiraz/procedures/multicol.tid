@@ -6,4 +6,4 @@ type: text/vnd.tiddlywiki
 <div class=`shiraz-multicol$(ncol)$ $(class)$`>
 <$transclude $variable="src" $mode=block/>
 </div>
-\end
+\end multicol

@@ -1,0 +1,31 @@
+title: $:/plugins/kookma/shiraz/language/fr-FR/history
+type: text/vnd.tiddlywiki
+
+Journal des modifications complet : [[https://kookma.github.io/TW-Shiraz/#ChangeLog]]
+
+* ''3.1.0+nikorion'' -- 2026.08.17 -- Refonte complète de l'i18n, suivant la convention des plugins nikorion. `tables/procs/lingo.tid` remonte en `language/lingo.tid` et sa procédure est renommée `shiraz-tables-lingo` → `shiraz-lingo`, puisqu'elle couvre désormais tout le plugin ; une fonction `shiraz-lingo-text` est ajoutée pour les positions d'attribut (`tooltip`, `aria-label`). Les chaînes sont découpées par domaine sous `language/<lang>/` (`common`, `settings`, `tables`) et couvrent maintenant le panneau de configuration, la bascule de palette, l'interface des tableaux dynamiques et les champs de recherche. Les libellés de `status` sont traduits alors que la valeur stockée dans le champ reste canonique, les valeurs personnalisées s'affichant telles quelles. `readme`, `history` et `license` deviennent des sélecteurs de langue ; le corps de la licence reste en anglais. Traduction française complète ajoutée.
+* ''3.0.10'' -- 2025.07.07 -- mise à jour pour TiddlyWiki 5.3.7
+* ''3.0.0'' -- 2024.07.12 -- nouveau Shiraz fondé sur TiddlyWiki 5.3.5 et Bootstrap 5.3.3
+
+---
+
+''NOTE'' : Shiraz 3.0.0 est une évolution majeure et n'est pas totalement rétrocompatible. Il s'appuie sur Bootstrap 5.3.3 et sur des fonctionnalités de TiddlyWiki 5.3.5 absentes des versions antérieures. Il utilise également de nouvelles procédures à en-tête modifié.
+
+---
+
+* ''2.9.5'' -- 2024.06.05 -- corrections mineures. Retour à la compatibilité TW 5.2.7+
+* ''2.9.4'' -- 2024.05.31 -- adoption de nouvelles fonctionnalités de 5.3.3
+* ''2.7.1'' -- 2022.12.17 -- mise à jour pour TiddlyWiki 5.2.4, quelques corrections
+* ''2.6.9'' -- 2022.10.17 -- explorateur de nœuds et gestionnaire de tâches améliorés
+* ''2.6.1'' -- 2022.09.27 -- nouveau sous-plugin Formatter, meilleur gestionnaire de tâches
+* ''2.5.0'' -- 2022.08.02 -- nouveau bloc de données, mise à jour pour TiddlyWiki 5.2.3
+* ''2.4.4'' -- 2021.09.19 -- classe CSS ajoutée pour personnaliser tbl-expand
+* ''2.4.2'' -- 2021.09.10 -- tableau rapide avec tout un jeu de formats de colonne
+* ''2.3.3'' -- 2021.05.20 -- corrections mineures dans la bascule de palette
+* ''2.3.1'' -- 2021.05.19 -- modèle tbl-linktype, utilisable pour générer l'explorateur de nœuds
+* ''2.3.0'' -- 2021.05.10 -- bascule de palette pour choisir entre palette claire et sombre/tamisée
+* ''2.2.2'' -- 2021.04.22 -- plusieurs correctifs sur la pagination, le carnet et les classes d'image
+* ''2.2.0'' -- 2021.02.26 -- mise à jour pour TW 5.1.23 et pagination ajoutée aux tableaux dynamiques
+* ''2.1.1'' -- 2020.03.25 -- macro slider avec état initial
+* ''2.1.0'' -- 2020.03.23 -- version stable sur TW-5.1.22pre
+* ''1.0.0'' -- 2018.10.05 -- première version publique

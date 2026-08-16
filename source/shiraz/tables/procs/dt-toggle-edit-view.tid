@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 <%else%>
 <$button class="tc-btn-invisible tc-tiddlylink" setTitle=<<tempTableEdit>> setIndex="mode" setTo="edit">{{$:/core/images/edit-button}}</$button>
 <%endif%>
-\end
+\end toggle-edit-view
 <!--clear-mark-for-delete
 clears the status of currentTable if it is marked to be deleted
 -->

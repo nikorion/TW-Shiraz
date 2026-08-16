@@ -1,0 +1,8 @@
+title: $:/plugins/kookma/shiraz-callout/language/fr-FR/history
+type: text/vnd.tiddlywiki
+
+Journal des modifications complet : https://kookma.github.io/TW-Shiraz/shiraz-callout.html#ChangeLog
+
+* ''0.9.0'' -- 2026.08.17 -- Localisation du readme, de la licence et de l'historique : les trois sont désormais des sélecteurs de langue qui transcluent en mode bloc `language/<lang>/…`, avec repli sur en-GB. Le corps de la licence reste en anglais. Traduction française complète ajoutée. Le sous-plugin ne livre pas de `lingo.tid` : ses macros ne produisent aucune chaîne propre — les libellés des encadrés viennent des arguments de l'appelant.
+* ''0.8.0'' -- 2024.12.29 -- mise à jour pour TW 5.3.3
+* ''0.5.2'' -- 2023.12.27 -- première version publique stable

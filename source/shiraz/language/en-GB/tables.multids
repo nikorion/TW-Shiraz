@@ -1,0 +1,42 @@
+title: $:/plugins/kookma/shiraz/language/en-GB/
+
+Tables/Select: Select...
+Tables/EmptyMessage: filter input is empty
+
+Tables/Priority/very-high: very high
+Tables/Priority/high: high
+Tables/Priority/normal: normal
+Tables/Priority/low: low
+Tables/Priority/very-low: very low
+Tables/Priority/no-priority: no priority
+
+Tables/Status/open: open
+Tables/Status/in-work: in work
+Tables/Status/on-hold: on hold
+Tables/Status/complete: complete
+Tables/Status/rework: rework
+Tables/Status/closed: closed
+
+Tables/Delete/ConfirmAll: Delete all <$count filter="[subfilter<inputFilter>]"/> records?
+Tables/Delete/Warning: Warning! this action cannot be undone!
+Tables/Delete/Or: or
+Tables/Delete/Yes: yes
+Tables/Delete/No: no
+Tables/Delete/Perform: delete
+Tables/Delete/Cancel: cancel
+Tables/Delete/MarkTooltip: mark for delete
+Tables/Delete/CancelTooltip: cancel delete
+Tables/Delete/PerformTooltip: delete all records or move to trashbin
+Tables/Delete/CancelOpTooltip: cancel the operation
+Tables/Delete/RecordTooltip: delete this record or move it to trash
+Tables/Delete/AllTooltip: delete all records or move them to trashbin
+
+Tables/Warning/MixedTypes: ''Danger'': Editable dynamic tables created from indexes with mixed types of tiddlers.
+Tables/Warning/DismissTooltip: Dismiss alert and continue with the current selection!
+Tables/Warning/WrongTypes: Tiddlers with wrong type:
+Tables/Warning/TypeLabel: type
+
+Tables/Pagination/Prev: Prev
+Tables/Pagination/Next: Next
+Tables/Pagination/Limit: Limit <$text text=<<num>>/>
+Tables/Pagination/ShowAll: Show all

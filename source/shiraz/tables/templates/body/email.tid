@@ -7,10 +7,10 @@ type: text/vnd.tiddlywiki
 
 \procedure display-email-address() 
 	<a class="tc-tiddlylink-external" href=<<href>> rel="noopener noreferrer" target="_blank"><<show-cell>></a>
-\end
+\end display-email-address
 \procedure display-email-address-locked()
 	<a class="tc-tiddlylink-external" href=<<href>> rel="noopener noreferrer" target="_blank"><<show-cell-locked>></a>
-\end
+\end display-email-address-locked
 
 <td>
 <%if [<tempTableEdit>is[missing]] :or[<tempTableEdit>getindex[mode]!match[edit]] %>

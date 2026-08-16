@@ -1,0 +1,10 @@
+title: $:/plugins/kookma/shiraz-formatter/language/fr-FR/history
+type: text/vnd.tiddlywiki
+
+Journal des modifications complet : https://kookma.github.io/TW-Shiraz/shiraz-formatter.html#ChangeLog
+
+* ''0.7.0'' -- 2026.08.17 -- Localisation du plugin : nouveau `language/lingo.tid` (`shiraz-formatter-lingo` + `shiraz-formatter-lingo-text`), chaînes réparties en `.multids` `common` et `snippets` par langue, couvrant le bouton de la barre d'outils de l'éditeur, le menu de formatage et les libellés des 15 extraits. `readme`, `history` et `license` deviennent des sélecteurs de langue ; le corps de la licence reste en anglais. Le corps des extraits est neutralisé — valeurs d'exemple vides, comme les 12 extraits qui l'étaient déjà — car le menu d'insertion du core insère le champ texte brut, qui ne peut donc pas dépendre de la langue ; l'extrait `table-dynamic` perd aussi son `emptyMessage` codé en dur et hérite donc du défaut traduit. Traduction française complète ajoutée.
+* ''0.6.2'' -- 2025.07.07 -- mise à jour pour TiddlyWiki 5.3.7
+* ''0.6.1'' -- 2024.09.13 -- mise à jour pour TiddlyWiki 5.3.5
+* ''0.5.1'' -- 2022.09.27 -- version stable et améliorée
+* ''0.1.0'' -- 2022.09.23 -- première version publique

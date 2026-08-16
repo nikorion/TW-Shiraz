@@ -1,12 +1,10 @@
-tags: 
+tags:
 title: $:/plugins/kookma/shiraz-formatter/readme
 type: text/vnd.tiddlywiki
 
-; Shiraz Formatter
-Editor toolbar buttons to format text and insert snippets.
-
-;Code and demo
-For learning plugin features, syntax, tutorial and examples see the plugin demo and code pages
-
-* Demo: https://kookma.github.io/TW-Shiraz/shiraz-formatter.html
-* Code: https://github.com/kookma/TW-Shiraz
+\whitespace trim
+<$let _lang={{{ [[$:/language]get[text]get[name]else[en-GB]] }}}>
+<$transclude $mode="block" $tiddler={{{ [[$:/plugins/kookma/shiraz-formatter/language/]addsuffix<_lang>addsuffix[/readme]] }}}>
+<$transclude $mode="block" $tiddler="$:/plugins/kookma/shiraz-formatter/language/en-GB/readme"/>
+</$transclude>
+</$let>

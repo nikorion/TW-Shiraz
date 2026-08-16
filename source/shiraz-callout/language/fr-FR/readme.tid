@@ -1,0 +1,11 @@
+title: $:/plugins/kookma/shiraz-callout/language/fr-FR/readme
+type: text/vnd.tiddlywiki
+
+; Shiraz callout
+Un encadré (//callout//) met en forme un court passage de texte différemment du reste de la page, afin d'attirer l'attention. Shiraz callout fournit des encadrés repliables et non repliables.
+
+;Code et démonstration
+Pour découvrir les fonctionnalités du plugin, sa syntaxe, des tutoriels et des exemples, voir les pages de démonstration et de code
+
+* Démonstration : https://kookma.github.io/TW-Shiraz/shiraz-callout.html
+* Code : https://github.com/kookma/TW-Shiraz

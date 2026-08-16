@@ -1,0 +1,10 @@
+title: $:/plugins/kookma/shiraz-formatter/language/en-GB/
+
+Buttons/Formatter/Caption: formatter
+Buttons/Formatter/Hint: Shiraz formatter button
+Dropdown/HighlightColor: Highlight color
+Dropdown/TextColor: Text color
+Dropdown/ChangeCase: Change case
+Dropdown/LowerCase: lower case
+Dropdown/UpperCase: upper case
+Dropdown/TitleCase: title case

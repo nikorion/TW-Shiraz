@@ -21,15 +21,15 @@ light-palette: $:/palettes/Vanilla
 
 <div class="shiraz-switch-palette">
 
-<$transclude $variable="selectPalette" 
-	title="Light palette" filter="[f.day[]]"
-	default={{!!light-palette}} index="light-palette"/>	
+<$transclude $variable="selectPalette"
+	title=<<shiraz-lingo-text "Settings/Palettes/Light">> filter="[f.day[]]"
+	default={{!!light-palette}} index="light-palette"/>
 
-<$transclude $variable="selectPalette" 
-	title="Dark palette" filter="[f.night[]]" 
+<$transclude $variable="selectPalette"
+	title=<<shiraz-lingo-text "Settings/Palettes/Dark">> filter="[f.night[]]"
 	default={{!!dark-palette}} index="dark-palette"/>
-	
-<label class="shiraz-switch-label">Reset to default</label><$button> {{$:/core/images/erase}}
+
+<label class="shiraz-switch-label"><<shiraz-lingo-text "Settings/Palettes/Reset">></label><$button> {{$:/core/images/erase}}
 
 <$action-setfield $tiddler=<<configTiddler>> 
 	$index="light-palette" $value={{!!light-palette}}/>

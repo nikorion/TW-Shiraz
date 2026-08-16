@@ -6,28 +6,28 @@ type: text/vnd.tiddlywiki
 <!-- create previous page button --->
 <$list filter="[<page-number>compare:number:lt[2]then[yes]else[no]]" variable=state>
 <$button disabled=<<state>> class="shiraz-dtable-page-prev tc-btn-invisible">
-{{$:/core/images/chevron-left}}&nbsp;<strong>Prev</strong>
+{{$:/core/images/chevron-left}}&nbsp;<strong><<shiraz-lingo "Tables/Pagination/Prev">></strong>
 <$action-listops $tiddler=<<pageStateTiddler>> $field=text $subfilter="+[subtract[1]] ~[[1]]"/>
 </$button>
 </$list>
-\end
+\end prev-button
 
 \procedure next-button()
 <!-- create next page button --->
 <$list filter="[<high>compare:number:gteq<total-entries>then[yes]else[no]]" variable=state> 
 <$button disabled=<<state>> class="shiraz-dtable-page-next tc-btn-invisible">
-<strong>Next</strong>&nbsp;{{$:/core/images/chevron-right}} 
+<strong><<shiraz-lingo "Tables/Pagination/Next">></strong>&nbsp;{{$:/core/images/chevron-right}}
 <$action-listops $tiddler=<<pageStateTiddler>> $field=text $subfilter="+[add[1]] ~[[2]]"/>
 </$button>
 </$list>
-\end
+\end next-button
 
 \procedure limit-entries()
 <!-- set number of entries per page -->
 <$select tiddler=<<entryPerPageStateTiddler>> default=25 actions="""<$action-setfield $tiddler=<<pageStateTiddler>> text=1/>""">
 <$list filter='5 10 15 20 25 30 40 50' variable=num>
-<option value=<<num>>>Limit <$text text=<<num>>/></option>
+<option value=<<num>>><<shiraz-lingo "Tables/Pagination/Limit">></option>
 </$list>
-<option value=<<total-entries>> >Show all</option>
+<option value=<<total-entries>> ><<shiraz-lingo "Tables/Pagination/ShowAll">></option>
 </$select>
-\end
+\end limit-entries

@@ -4,8 +4,8 @@ type: text/vnd.tiddlywiki
 
 \procedure vspace(height:"25px")
 <p style=`margin-bottom: $(height)$;`></p>
-\end
+\end vspace
 
 \procedure hspace(width:"25px")
 <span style=`margin-left: $(width)$;`></span>
-\end
+\end hspace

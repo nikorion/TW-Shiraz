@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 	<$list filter="[subfilter<inputFilter>]" variable="currentRecord">
 		<$action-createtiddler $basetitle=<<currentRecord>> $template=<<currentRecord>> />
 	<$list>
-\end
+\end clone-all-records
 <%if [<tempTableEdit>getindex[mode]match[edit]] %>
 	<th class="shiraz-dtable-svg">
 		<span>

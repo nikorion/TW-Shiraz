@@ -1,0 +1,20 @@
+title: $:/plugins/kookma/shiraz/language/en-GB/
+
+Settings/Intro: These settings let you customise the behaviour of Shiraz plugin.
+Settings/MoreSidebar/Caption: Show Shiraz setting in more sidebar
+Settings/MoreSidebar/Label: Show setting in more sidebar
+Settings/Options/Caption: Options
+Settings/Options/ColorifyButtons: Colorify UI buttons
+Settings/Options/HideToolbar: Hide tiddler's view toolbar and show on mouse hover
+Settings/Options/ColorifyActiveTab: Colorify active sidebar tab
+Settings/Palettes/Caption: Set dark and light palettes
+Settings/Palettes/Light: Light palette
+Settings/Palettes/Dark: Dark palette
+Settings/Palettes/Reset: Reset to default
+Settings/Breadcrumbs/Caption: Breadcrumbs
+Settings/Breadcrumbs/Display: Display breadcrumbs
+Settings/Breadcrumbs/StoryList: Use `$:/StoryList` for breadcrumbs
+Settings/Breadcrumbs/HistoryList: Use `$:/HistoryList` for breadcrumbs
+Settings/Editor/Caption: Choose Local Editor for Dynamic Table
+Settings/Editor/Main: Use TiddlyWiki main editor
+Settings/Editor/Textarea: Use simple text area

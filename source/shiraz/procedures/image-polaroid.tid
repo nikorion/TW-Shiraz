@@ -7,4 +7,4 @@ type: text/vnd.tiddlywiki
   <$image source=<<img>> tooltip=<<tooltip>> />
   <figcaption class="image-polaroid-caption"><<caption>></figcaption>
 </figure>
-\end
+\end image-polaroid

@@ -1,0 +1,34 @@
+title: $:/plugins/kookma/shiraz/language/lingo
+tags: $:/tags/Global
+
+<!--
+Résolution i18n pour tout le plugin Shiraz. Deux points d'entrée, à dessein.
+
+  - `shiraz-lingo` (\procedure) → REND le wikitext (backticks → <code>, liens
+    cliquables…). À utiliser dans un corps de tiddler / pour de la prose.
+  - `shiraz-lingo-text` (\function) → renvoie la chaîne BRUTE, non rendue. Seule
+    forme utilisable dans un attribut (tooltip=<<…>>), un titre `!!` ou du HTML
+    inline où un <p> gênerait.
+
+Une \procedure ne peut pas servir de valeur d'attribut (son corps est un widget,
+pas une chaîne) ; une \function ne peut pas rendre du wikitext. D'où les deux.
+
+La cascade langue→en-GB→clé est répétée dans chacune plutôt que factorisée : une
+\function custom appelée en opérateur de filtre direct (`[ma-fn<arg>]`) ne bind
+pas son opérande au paramètre en TW 5.4, la factorisation casserait donc la
+résolution. Les chaînes étant des tiddlers SHADOW (empaquetés dans le plugin),
+leur existence se teste avec `get[text]`, jamais `is[tiddler]`/`!is[missing]`.
+-->
+
+\procedure shiraz-lingo(title)
+\whitespace trim
+<$let _lang={{{ [[$:/language]get[text]get[name]else[en-GB]] }}}>
+<$transclude $tiddler={{{ [[$:/plugins/kookma/shiraz/language/]addsuffix<_lang>addsuffix[/]addsuffix<title>] }}}>
+<$transclude $tiddler={{{ [[$:/plugins/kookma/shiraz/language/en-GB/]addsuffix<title>] }}}/>
+</$transclude>
+</$let>
+\end shiraz-lingo
+
+\function shiraz-lingo-text(title)
+[[$:/language]get[text]get[name]else[en-GB]addprefix[$:/plugins/kookma/shiraz/language/]addsuffix[/]addsuffix<title>get[text]] :else[[$:/plugins/kookma/shiraz/language/en-GB/]addsuffix<title>get[text]] :else[<title>]
+\end shiraz-lingo-text

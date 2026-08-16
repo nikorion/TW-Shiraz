@@ -1,0 +1,20 @@
+title: $:/plugins/kookma/shiraz/language/fr-FR/
+
+Settings/Intro: Ces réglages permettent de personnaliser le comportement du plugin Shiraz.
+Settings/MoreSidebar/Caption: Afficher les réglages Shiraz dans la barre latérale « Plus »
+Settings/MoreSidebar/Label: Afficher les réglages dans la barre latérale « Plus »
+Settings/Options/Caption: Options
+Settings/Options/ColorifyButtons: Coloriser les boutons de l'interface
+Settings/Options/HideToolbar: Masquer la barre d'outils du tiddler et l'afficher au survol
+Settings/Options/ColorifyActiveTab: Coloriser l'onglet actif de la barre latérale
+Settings/Palettes/Caption: Définir les palettes claire et sombre
+Settings/Palettes/Light: Palette claire
+Settings/Palettes/Dark: Palette sombre
+Settings/Palettes/Reset: Réinitialiser aux valeurs par défaut
+Settings/Breadcrumbs/Caption: Fil d'Ariane
+Settings/Breadcrumbs/Display: Afficher le fil d'Ariane
+Settings/Breadcrumbs/StoryList: Utiliser `$:/StoryList` pour le fil d'Ariane
+Settings/Breadcrumbs/HistoryList: Utiliser `$:/HistoryList` pour le fil d'Ariane
+Settings/Editor/Caption: Choisir l'éditeur local des tableaux dynamiques
+Settings/Editor/Main: Utiliser l'éditeur principal de TiddlyWiki
+Settings/Editor/Textarea: Utiliser une simple zone de texte

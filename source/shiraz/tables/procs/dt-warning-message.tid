@@ -6,17 +6,17 @@ type: text/vnd.tiddlywiki
 
 \procedure show_tiddler_types()
 <div style="text-align:left">
-<br>Tiddlers with wrong type:
+<br><<shiraz-lingo "Tables/Warning/WrongTypes">>
 <ul>
 <$list filter="[mixedtype.criteria[]]" >
-<li><$link/>&nbsp;(type: <$view field=type/>)</li>
+<li><$link/>&nbsp;(<<shiraz-lingo "Tables/Warning/TypeLabel">>: <$view field=type/>)</li>
 </$list>
 </ul>
 </div>
 \end show_tiddler_types
 
 \procedure dismissButton()
-<$button class="tc-btn-invisible tc-tiddlylink" style="fill:white;" tooltip="Dismiss alert and continue with the current selection!">
+<$button class="tc-btn-invisible tc-tiddlylink" style="fill:white;" tooltip=<<shiraz-lingo-text "Tables/Warning/DismissTooltip">>>
 {{$:/core/images/close-button}}
 <$action-setfield $tiddler=<<stateWarningMsg>> text="dissmiss"/>
 </$button>
@@ -27,7 +27,7 @@ type: text/vnd.tiddlywiki
 	<%if [mixedtype.criteria[]limit[1]] [<stateWarningMsg>is[missing]] :and[count[]match[2]] %>
 		<tr class="tbl-delete-confirm">
 			<th colspan=<<columnsCount>> >
-				''Danger'': Editable dynamic tables created from indexes with mixed types of tiddlers.&nbsp;<<dismissButton>>
+				<<shiraz-lingo "Tables/Warning/MixedTypes">>&nbsp;<<dismissButton>>
 				<<show_tiddler_types>>
 			</th>
 		</tr>
