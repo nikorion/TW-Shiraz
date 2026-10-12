@@ -2,8 +2,8 @@ tags: $:/tags/Global
 title: $:/plugins/kookma/shiraz/procedures/details
 type: text/vnd.tiddlywiki
 
-\define details(label:"", src:"", status:"", labelClass:"", srcClass:"")
-<details class="kk-shiraz-details" $status$>
+\define details(label:"", src:"", status:"", labelClass:"mb-0 h5 bg-dark text-light", srcClass:"mt-0", class:"alert border-dark p-0")
+<details class={{{ [[kk-shiraz-details]] [<__class__>] +[join[ ]] }}} $status$>
 	<$let tv-wikilinks="no">
 		<summary data-bs-theme=<<color-scheme>> class=<<__labelClass__>> ><<__label__>></summary>
 	</$let>
@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
 		<%if [<__src__>has[title]] %>
 			<$transclude $tiddler=<<__src__>> $mode="block"/>
 		<%else%>
-			<$transclude $variable="src" $mode="block"/>
+			<$transclude $variable="__src__" $mode="block"/>
 		<%endif%>			
 	</div>
 </details>
@@ -29,7 +29,7 @@ type: text/vnd.tiddlywiki
 
 <$list filter="[subfilter<filter>search:title<searchTerm>]">
 <$transclude $variable=details label=<<currentTiddler>>  src=<<currentTiddler>>
-			 status=<<status>> labelClass=<<labelClass>> srcClass=<<srcClass>>/>
+			 status=<<status>> labelClass=<<labelClass>> srcClass=<<srcClass>> class=""/>
 </$list>
 
 \end faqs-details
