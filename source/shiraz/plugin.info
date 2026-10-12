@@ -1,6 +1,6 @@
 {
     "title": "$:/plugins/kookma/shiraz",
-    "version": "3.1.0+nikorion",
+    "version": "3.1.1+nikorion",
     "stability": "STABILITY_1_EXPERIMENTAL",
     "name": "Shiraz",
     "description": "Extended markups, tables, images, styles, and procedures",

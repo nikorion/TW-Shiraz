@@ -7,5 +7,5 @@ type: text/vnd.tiddlywiki
 \end badge
 
 \procedure badge-pill(type:"primary" src:"")
-<span data-bs-theme=<<color-scheme>> class=`badge badge-pill text-bg-$(type)$`><$transclude $variable="src"/></span>
+<span data-bs-theme=<<color-scheme>> class=`badge rounded-pill text-bg-$(type)$`><$transclude $variable="src"/></span>
 \end badge-pill

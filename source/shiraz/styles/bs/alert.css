@@ -18,8 +18,21 @@
   border-radius: var(--bs-alert-border-radius);
 }
 
-.alert.block {
-  --bs-alert-padding-y: 0.1rem;
+/* Block mode (nikorion): the alert padding already separates the content from
+   the frame, so the outer margins of its first and last blocks (paragraph,
+   list, table, quote…) are trimmed. Only direct children are targeted, not the
+   first paragraph of a nested list or quote. A leading heading keeps a little
+   air above it. */
+.alert.block > :first-child {
+  margin-top: 0.1rem;
+}
+
+.alert.block > :last-child {
+  margin-bottom: 0.1rem;
+}
+
+.alert.block > :is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-top: 0.3rem;
 }
 
 .alert-heading {

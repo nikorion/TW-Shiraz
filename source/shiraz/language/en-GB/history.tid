@@ -3,6 +3,7 @@ type: text/vnd.tiddlywiki
 
 Full change log:  [[https://kookma.github.io/TW-Shiraz/#ChangeLog]]
 
+* ''3.1.1+nikorion'' -- 2026.10.12 -- `details` gets a dark bordered look by default (new `class` parameter; `faqs-details` keeps its own) and inline text passed as `src` no longer renders empty. With "Colorify UI buttons", the delete and move-to-trashbin buttons are red in view mode too. `badge-pill` uses the Bootstrap 5 `rounded-pill` class. In `block` mode, alerts trim the outer margins of their first and last blocks (paragraph, list, table…), a leading heading keeping a little air above it.
 * ''3.1.0+nikorion'' -- 2026.08.17 -- Full i18n rework, following the nikorion plugin convention. `tables/procs/lingo.tid` moved up to `language/lingo.tid` and its procedure was renamed `shiraz-tables-lingo` → `shiraz-lingo`, as it now covers the whole plugin; a `shiraz-lingo-text` function was added for attribute positions (`tooltip`, `aria-label`). Strings are split by domain under `language/<lang>/` (`common`, `settings`, `tables`) and now cover the Control Panel, the palette switcher, the dynamic-table UI and the search placeholders. `status` labels are translated while the stored field value stays canonical, custom values falling through unchanged. `readme`, `history` and `license` became language selectors; the licence body stays in English. Full French translation added.
 * ''3.0.10'' -- 2025.07.07-- updated to TiddlyWiki 5.3.7
 * ''3.0.0'' -- 2024.07.12 -- new Shiraz based on TiddlyWiki 5.3.5 and Bootstrap 5.33
