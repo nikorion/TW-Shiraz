@@ -8,8 +8,9 @@ type: text/vnd.tiddlywiki
 /*Tiddler edit toolbar buttons as traffic lights*/
 .tc-tiddler-controls .tc-image-done-button {fill:#BBEEBB;}
 .tc-tiddler-controls .tc-image-cancel-button {fill:#EEDD99;}
-.tc-tiddler-edit-title .tc-tiddler-controls .tc-image-delete-button,
-.tc-tiddler-edit-frame .tc-tiddler-controls .tc-image-fa-trash-alt {fill:#EEBBBB;} /* for trashbin plugin: move to trashbin button/*
+/* Delete and trashbin (move to trashbin) buttons, in view and edit modes */
+.tc-tiddler-controls .tc-image-delete-button,
+.tc-tiddler-controls .tc-image-fa-trash-alt {fill:#EEBBBB;}
 /* These css rules makes page control buttons in beatiful color */
 /*page control buttons*/
 .tc-page-controls .tc-image-new-button     { fill: #5EB95E; } /*New tiddler button*/
